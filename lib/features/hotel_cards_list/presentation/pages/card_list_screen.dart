@@ -11,7 +11,7 @@ import '../widgets/filters_bottom_sheet.dart';
 import '../widgets/sort_bottom_sheet.dart';
 
 class CardListScreen extends StatefulWidget {
-  CardListScreen({super.key});
+  const CardListScreen({super.key});
 
   @override
   State<CardListScreen> createState() => _CardListScreenState();

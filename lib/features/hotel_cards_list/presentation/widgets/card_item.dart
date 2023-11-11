@@ -119,7 +119,7 @@ class CardItem extends StatelessWidget {
                             )
                           ]),
                     ),
-                    Spacer(),
+                    const Spacer(),
                     Row(
                       children: [
                         Text(
@@ -127,7 +127,7 @@ class CardItem extends StatelessWidget {
                           style: TextStyle(
                               fontSize: 22.sp, fontWeight: FontWeight.bold),
                         ),
-                        Icon(Icons.arrow_forward_ios)
+                        const Icon(Icons.arrow_forward_ios)
                       ],
                     ),
                   ],

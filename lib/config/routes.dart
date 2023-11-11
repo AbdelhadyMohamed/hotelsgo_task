@@ -9,7 +9,7 @@ class Routes {
   static Route onGenerate(RouteSettings settings) {
     switch (settings.name) {
       case AppRoute.cardList:
-        return MaterialPageRoute(builder: (context) => CardListScreen());
+        return MaterialPageRoute(builder: (context) => const CardListScreen());
       default:
         return MaterialPageRoute(
           builder: (context) {
