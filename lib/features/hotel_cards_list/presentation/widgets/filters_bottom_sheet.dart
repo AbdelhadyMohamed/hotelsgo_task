@@ -7,7 +7,7 @@ class FiltersBottomSheet extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       height: MediaQuery.of(context).size.height * 0.9,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -32,7 +32,7 @@ class FiltersBottomSheet extends StatelessWidget {
                       onTap: () {
                         Navigator.pop(context);
                       },
-                      child: Icon(Icons.cancel_outlined))
+                      child: const Icon(Icons.cancel_outlined))
                 ],
               ),
             ),
@@ -63,9 +63,9 @@ class FiltersBottomSheet extends StatelessWidget {
           ),
           Container(
             height: 20.h,
-            margin: EdgeInsets.only(left: 50),
+            margin: const EdgeInsets.only(left: 50),
             width: 300.w,
-            child: DehancerSlider(
+            child: const DehancerSlider(
               minValue: 0,
               maxValue: 100,
               defaultValue: 100,
@@ -77,12 +77,12 @@ class FiltersBottomSheet extends StatelessWidget {
           Row(
             children: [
               SizedBox(width: 50.w),
-              Text(
+              const Text(
                 "\$20",
                 style: TextStyle(fontSize: 18),
               ),
-              Spacer(),
-              Text(
+              const Spacer(),
+              const Text(
                 "\$540+",
                 style: TextStyle(fontSize: 18),
               ),
@@ -298,7 +298,7 @@ class FiltersBottomSheet extends StatelessWidget {
                   style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
                 ),
                 SizedBox(height: 10.h),
-                Divider(thickness: 2),
+                const Divider(thickness: 2),
               ],
             ),
           ),
@@ -307,21 +307,27 @@ class FiltersBottomSheet extends StatelessWidget {
             padding: EdgeInsets.only(left: 20.w),
             child: Column(
               children: [
-                const Row(
+                Row(
                   children: [
-                    Text(
+                    const Text(
                       "Location",
                       style: TextStyle(fontSize: 22),
                     ),
-                    Spacer(),
-                    Text(
-                      "City Center   >  ",
-                      style: TextStyle(fontSize: 22),
+                    const Spacer(),
+                    Row(
+                      children: [
+                        const Text(
+                          "City Center",
+                          style: TextStyle(fontSize: 22),
+                        ),
+                        SizedBox(width: 10.w),
+                        const Icon(Icons.arrow_forward_ios_rounded)
+                      ],
                     ),
                   ],
                 ),
                 SizedBox(height: 10.h),
-                Divider(thickness: 2),
+                const Divider(thickness: 2),
               ],
             ),
           ),

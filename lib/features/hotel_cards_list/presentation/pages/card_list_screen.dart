@@ -48,8 +48,8 @@ class _CardListScreenState extends State<CardListScreen>
         builder: (context, state) {
           return Scaffold(
               appBar: AppBar(
-                elevation: 0,
-                backgroundColor: Colors.transparent,
+                elevation: 10,
+                backgroundColor: Colors.white,
                 title: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
