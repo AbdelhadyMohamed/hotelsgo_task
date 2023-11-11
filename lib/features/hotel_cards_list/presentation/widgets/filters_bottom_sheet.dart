@@ -152,6 +152,7 @@ class FiltersBottomSheet extends StatelessWidget {
                 ),
                 SizedBox(width: 30.w),
                 Container(
+                  height: 45.h,
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(4.r),
                       color: Colors.green[900],
