@@ -98,7 +98,16 @@ class CardItem extends StatelessWidget {
                           children: [
                             Container(
                                 padding: EdgeInsets.symmetric(vertical: 10.h),
-                                child: const Text("Our lowest price")),
+                                child: Container(
+                                    padding: EdgeInsets.all(3.w.h),
+                                    decoration: BoxDecoration(
+                                        color: Colors.blue[100],
+                                        borderRadius:
+                                            BorderRadius.circular(5.r),
+                                        border: Border.all(
+                                            color: Colors.blue[100] ??
+                                                Colors.blueGrey)),
+                                    child: const Text("Our lowest price"))),
                             Row(
                               children: [
                                 Text("\$",
