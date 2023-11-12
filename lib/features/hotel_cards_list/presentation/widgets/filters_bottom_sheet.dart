@@ -468,9 +468,14 @@ class _FiltersBottomSheetState extends State<FiltersBottomSheet> {
           Center(
             child: InkWell(
               onTap: () {
-                Navigator.pop(context);
-                widget.bloc.add(
-                    FilterEvent(stars ?? 0, pricePerNight ?? 0, rating ?? 0));
+                if (rating != null || stars != null || pricePerNight != null) {
+                  Navigator.pop(context);
+                  // print(stars);
+                  // print(pricePerNight);
+                  // print(rating);
+                  widget.bloc.add(
+                      FilterEvent(stars ?? 0, pricePerNight ?? 0, rating ?? 0));
+                }
               },
               child: Card(
                 color: Colors.blue[700],

@@ -37,8 +37,8 @@ class CardsListItem {
     address = json['address'];
   }
   String? name;
-  int? starts;
-  int? price;
+  num? starts;
+  num? price;
   String? currency;
   String? image;
   num? reviewScore;
