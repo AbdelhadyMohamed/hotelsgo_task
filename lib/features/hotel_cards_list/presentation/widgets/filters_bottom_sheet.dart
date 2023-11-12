@@ -30,6 +30,7 @@ class _FiltersBottomSheetState extends State<FiltersBottomSheet> {
   double? rating;
 
   double? stars;
+  String? sliderValue;
 
   @override
   Widget build(BuildContext context) {
@@ -100,16 +101,23 @@ class _FiltersBottomSheetState extends State<FiltersBottomSheet> {
             child: DehancerSlider(
               onValueChanged: (value) {
                 pricePerNight = value;
+                sliderValue = value.toString();
+                setState(() {});
               },
               trackBarTouchAreaSize: 20,
               minValue: 20,
               maxValue: 540,
               defaultValue: 20,
               startValue: 20,
-              value: 20,
+              value: double.parse(sliderValue ?? "20"),
             ),
           ),
-          SizedBox(height: 30.h),
+          Center(
+              child: Text(
+            "current value: ${sliderValue ?? 20}",
+            style: const TextStyle(fontSize: 17),
+          )),
+          SizedBox(height: 10.h),
           Row(
             children: [
               SizedBox(width: 50.w),

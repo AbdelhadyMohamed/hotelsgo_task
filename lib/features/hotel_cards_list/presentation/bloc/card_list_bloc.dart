@@ -108,15 +108,6 @@ class CardListBloc extends Bloc<CardListEvent, CardListState> {
             CardsModel cardsModel = await getCardDataUseCase.call();
             if (cardsModel.cardsList!.isNotEmpty &&
                 cardsModel.cardsList != null) {
-              // CardsModel newCardModel = CardsModel();
-              // for (int i = 0; i < 6; i++) {
-              //   if (cardsModel.cardsList![i].price! >= event.price &&
-              //       cardsModel.cardsList![i].reviewScore! >= event.rating &&
-              //       cardsModel.cardsList![i].starts! >= event.stars) {
-              //     newCardModel.cardsList?.add(cardsModel.cardsList![i]);
-              //   }
-              //   // print(newCardModel.cardsList?[1] ?? "error");
-              // }
               cardsModel.cardsList
                   ?.removeWhere((element) => element.price! < event.price);
               cardsModel.cardsList
