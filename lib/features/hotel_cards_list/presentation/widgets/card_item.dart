@@ -107,7 +107,9 @@ class CardItem extends StatelessWidget {
                                         border: Border.all(
                                             color: Colors.blue[100] ??
                                                 Colors.blueGrey)),
-                                    child: const Text("Our lowest price"))),
+                                    child: const Text("Our lowest price",
+                                        style: TextStyle(
+                                            fontWeight: FontWeight.w500)))),
                             Row(
                               children: [
                                 Text("\$",

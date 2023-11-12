@@ -59,7 +59,7 @@ class _CardListScreenState extends State<CardListScreen>
                       },
                       child: Row(
                         children: [
-                          const Icon(Icons.filter, color: Colors.black),
+                          const Icon(Icons.filter, color: Colors.blueAccent),
                           SizedBox(width: 10.w),
                           const Text("Filters",
                               style: TextStyle(color: Colors.blueAccent))
@@ -74,7 +74,7 @@ class _CardListScreenState extends State<CardListScreen>
                       },
                       child: Row(
                         children: [
-                          const Icon(Icons.sort, color: Colors.black),
+                          const Icon(Icons.sort, color: Colors.blueAccent),
                           SizedBox(width: 10.w),
                           const Text("Sort",
                               style: TextStyle(color: Colors.blueAccent))
