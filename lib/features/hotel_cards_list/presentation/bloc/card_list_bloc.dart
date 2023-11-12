@@ -103,6 +103,28 @@ class CardListBloc extends Bloc<CardListEvent, CardListState> {
           } catch (e) {
             emit(state.copyWith(screenStatus: ScreenStatus.failure));
           }
+        } else if (event is FilterEvent) {
+          try {
+            CardsModel cardsModel = await getCardDataUseCase.call();
+            if (cardsModel.cardsList!.isNotEmpty &&
+                cardsModel.cardsList != null) {
+              CardsModel newCardModel = CardsModel();
+              for (int i = 0; i < 6; i++) {
+                if (cardsModel.cardsList![i].price! >= event.price &&
+                    cardsModel.cardsList![i].reviewScore! >= event.rating &&
+                    cardsModel.cardsList![i].starts! >= event.stars) {
+                  newCardModel.cardsList?.add(cardsModel.cardsList![i]);
+                }
+              }
+
+              emit(state.copyWith(
+                  screenStatus: ScreenStatus.filter,
+                  cardsModel: newCardModel,
+                  sortByDistance: true));
+            }
+          } catch (e) {
+            emit(state.copyWith(screenStatus: ScreenStatus.failure));
+          }
         }
       },
     );

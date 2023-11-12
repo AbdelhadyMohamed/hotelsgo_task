@@ -12,6 +12,7 @@ enum ScreenStatus {
   sortByRating,
   sortByPrice,
   sortByDistance,
+  filter
 }
 
 class CardListState {

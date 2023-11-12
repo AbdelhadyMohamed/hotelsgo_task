@@ -55,7 +55,8 @@ class _CardListScreenState extends State<CardListScreen>
                   children: [
                     InkWell(
                       onTap: () {
-                        showFiltersBottomSheet(context);
+                        showFiltersBottomSheet(
+                            context, BlocProvider.of<CardListBloc>(context));
                       },
                       child: Row(
                         children: [
@@ -109,14 +110,14 @@ class _CardListScreenState extends State<CardListScreen>
         isScrollControlled: true);
   }
 
-  Future showFiltersBottomSheet(BuildContext context) {
+  Future showFiltersBottomSheet(BuildContext context, CardListBloc bloc) {
     return showModalBottomSheet(
         context: context,
         builder: (context) {
           return Padding(
               padding: EdgeInsets.only(
                   bottom: MediaQuery.of(context).viewInsets.bottom),
-              child: const FiltersBottomSheet());
+              child: FiltersBottomSheet(bloc));
         },
         isScrollControlled: true);
   }

@@ -18,3 +18,10 @@ class SortByRating extends CardListEvent {}
 class SortByPrice extends CardListEvent {}
 
 class SortByDistance extends CardListEvent {}
+
+class FilterEvent extends CardListEvent {
+  final double stars;
+  final double price;
+  final double rating;
+  FilterEvent(this.stars, this.price, this.rating);
+}
