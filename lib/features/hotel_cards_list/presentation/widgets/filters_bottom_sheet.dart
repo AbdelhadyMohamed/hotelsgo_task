@@ -1,12 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:dehancer_slider/dehancer_slider.dart';
-
-import '../../../../core/api/api_manager.dart';
-import '../../data/data_sources/remote/remote_ds_impl.dart';
-import '../../data/repositories/cards_repo_impl.dart';
-import '../../domain/use_cases/get_card_data_use_case.dart';
 import '../bloc/card_list_bloc.dart';
 
 enum Rating { zero, seven, sevenHalf, eight, eightHalf }
@@ -122,7 +116,7 @@ class _FiltersBottomSheetState extends State<FiltersBottomSheet> {
             children: [
               SizedBox(width: 50.w),
               const Text(
-                "\$20",
+                "\$20+",
                 style: TextStyle(fontSize: 18),
               ),
               const Spacer(),
