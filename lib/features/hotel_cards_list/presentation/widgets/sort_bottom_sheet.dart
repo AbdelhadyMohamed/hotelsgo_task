@@ -48,6 +48,7 @@ class SortBottomSheet extends StatelessWidget {
                         onTap: () {
                           bloc.add(SortByRecommended());
                           CardListBloc.get(context).add(SortByRecommended());
+                          Navigator.pop(context);
                         },
                         child: SortingItem(state.recommendations ?? false,
                             "Our recommendations")),
@@ -56,6 +57,7 @@ class SortBottomSheet extends StatelessWidget {
                           bloc.add(SortByRatingAndRecommended());
                           CardListBloc.get(context)
                               .add(SortByRatingAndRecommended());
+                          Navigator.pop(context);
                         },
                         child: SortingItem(
                             state.sortByRatingAndRecommendations ?? false,
@@ -65,6 +67,7 @@ class SortBottomSheet extends StatelessWidget {
                           bloc.add(SortByPriceAndRecommended());
                           CardListBloc.get(context)
                               .add(SortByPriceAndRecommended());
+                          Navigator.pop(context);
                         },
                         child: SortingItem(
                             state.sortByPriceAndRecommendations ?? false,
@@ -74,6 +77,7 @@ class SortBottomSheet extends StatelessWidget {
                           bloc.add(SortByDistanceAndRecommended());
                           CardListBloc.get(context)
                               .add(SortByDistanceAndRecommended());
+                          Navigator.pop(context);
                         },
                         child: SortingItem(
                             state.sortByDistanceAndRecommendations ?? false,
@@ -82,6 +86,7 @@ class SortBottomSheet extends StatelessWidget {
                         onTap: () {
                           bloc.add(SortByRating());
                           CardListBloc.get(context).add(SortByRating());
+                          Navigator.pop(context);
                         },
                         child: SortingItem(
                             state.sortByRating ?? false, "Rating Only")),
@@ -89,6 +94,7 @@ class SortBottomSheet extends StatelessWidget {
                         onTap: () {
                           bloc.add(SortByPrice());
                           CardListBloc.get(context).add(SortByPrice());
+                          Navigator.pop(context);
                         },
                         child: SortingItem(
                             state.sortByPrice ?? false, "Price Only")),
@@ -96,6 +102,7 @@ class SortBottomSheet extends StatelessWidget {
                         onTap: () {
                           bloc.add(SortByDistance());
                           CardListBloc.get(context).add(SortByDistance());
+                          Navigator.pop(context);
                         },
                         child: SortingItem(
                             state.sortByDistance ?? false, "Distance Only")),
